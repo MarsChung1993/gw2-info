@@ -52,6 +52,7 @@ export default defineComponent({
       { to: '/items', icon: '🗡️', title: '物品搜尋', desc: '搜尋物品資訊與交易行價格' },
       { to: '/maps', icon: '🗺️', title: '地圖資訊', desc: '瀏覽大陸、樓層、地區與 POI' },
       { to: '/inventory', icon: '🎒', title: '背包 & 倉庫', desc: '查看角色背包與帳號倉庫物品' },
+      { to: '/meta', icon: '⏰', title: 'META 事件表', desc: '查看即將發生的世界首領與 META 事件' },
       { to: '/wvw', icon: '🏰', title: 'WvW 戰況', desc: '查看伺服器對戰即時資訊' },
     ]
 

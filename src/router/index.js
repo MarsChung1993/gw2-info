@@ -37,6 +37,11 @@ const routes = [
     name: 'inventory',
     component: () => import('../views/InventoryView.vue'),
   },
+  {
+    path: '/meta',
+    name: 'meta',
+    component: () => import('../views/MetaView.vue'),
+  },
 ]
 
 const router = createRouter({
