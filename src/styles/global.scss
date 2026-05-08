@@ -1,0 +1,115 @@
+@use 'variables' as *;
+@use 'sass:color';
+
+// 全域 Reset & Base
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  background-color: $color-bg-dark;
+  color: $color-text;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: $color-gold;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $color-gold-light;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+  color: $color-gold;
+  line-height: 1.2;
+}
+
+button {
+  cursor: pointer;
+  font-family: $font-body;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+// 通用 Card 元件
+.card {
+  background-color: $color-bg-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: $spacing-md;
+}
+
+// 通用 Panel
+.panel {
+  background-color: $color-bg-panel;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+}
+
+// Rarity 顏色 utility class
+.rarity-junk { color: $rarity-junk; }
+.rarity-basic { color: $rarity-basic; }
+.rarity-fine { color: $rarity-fine; }
+.rarity-masterwork { color: $rarity-masterwork; }
+.rarity-rare { color: $rarity-rare; }
+.rarity-exotic { color: $rarity-exotic; }
+.rarity-ascended { color: $rarity-ascended; }
+.rarity-legendary { color: $rarity-legendary; }
+
+// 載入動畫
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $spacing-xl;
+
+  &::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 3px solid $color-border;
+    border-top-color: $color-gold;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+// 錯誤訊息
+.error-message {
+  background-color: rgba($color-red, 0.15);
+  border: 1px solid $color-red;
+  border-radius: $radius-sm;
+  padding: $spacing-sm $spacing-md;
+  color: color.adjust($color-red, $lightness: 20%);
+  font-size: 0.9rem;
+}
+
+// 容器
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
