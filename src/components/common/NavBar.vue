@@ -14,6 +14,7 @@
       <li><router-link to="/items">物品</router-link></li>
       <li><router-link to="/maps">地圖</router-link></li>
       <li><router-link to="/inventory">背包</router-link></li>
+      <li><router-link to="/legendary">傳奇進度</router-link></li>
       <li><router-link to="/meta">META表</router-link></li>
       <li><router-link to="/wvw">WvW</router-link></li>
     </ul>

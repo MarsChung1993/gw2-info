@@ -42,6 +42,11 @@ const routes = [
     name: 'meta',
     component: () => import('../views/MetaView.vue'),
   },
+  {
+    path: '/legendary',
+    name: 'legendary',
+    component: () => import('../views/LegendaryView.vue'),
+  },
 ]
 
 const router = createRouter({
